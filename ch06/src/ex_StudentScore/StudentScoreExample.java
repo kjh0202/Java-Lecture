@@ -23,7 +23,8 @@ public class StudentScoreExample {
 		int sci = Integer.parseInt(scan.nextLine());
 		
 		StudentScore studentScore = new StudentScore(name, math, eng, sci);
-		studentScore.average();
+		double avg = studentScore.average();
+		System.out.printf("평균: %.2f\n", avg);
 		System.out.println(studentScore.toString());
 
 		scan.close();
