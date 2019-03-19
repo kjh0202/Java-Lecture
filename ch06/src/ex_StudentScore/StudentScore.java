@@ -1,11 +1,11 @@
 package ex_StudentScore;
 
 public class StudentScore {
-	String name;
-	int math;
-	int eng;
-	int sci;
-	double avg;
+	private String name;
+	private int math;
+	private int eng;
+	private int sci;
+	private double avg;
 
 	public StudentScore(String name, int math, int eng, int sci) {
 		this.name = name;
@@ -19,7 +19,7 @@ public class StudentScore {
 		return "StudentScore [name=" + name + ", math=" + math + ", eng=" + eng + ", sci=" + sci + ", avg=" + avg + "]";
 	}
 	
-	double average() {
+	public double average() {
 		int sum = this.math + this.eng + this.sci;
 		double avg = (double)sum / 3;
 		this.avg = avg;
