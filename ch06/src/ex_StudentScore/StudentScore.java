@@ -12,11 +12,7 @@ public class StudentScore {
 		this.math = math;
 		this.eng = eng;
 		this.sci = sci;
-	}
-
-	@Override
-	public String toString() {
-		return "StudentScore [name=" + name + ", math=" + math + ", eng=" + eng + ", sci=" + sci + ", avg=" + avg + "]";
+		//this.avg = average();
 	}
 	
 	public double average() {
@@ -26,4 +22,8 @@ public class StudentScore {
 		return avg;
 	}
 	
+	@Override
+	public String toString() {
+		return "StudentScore [name=" + name + ", math=" + math + ", eng=" + eng + ", sci=" + sci + ", avg=" + avg + "]";
+	}
 }
