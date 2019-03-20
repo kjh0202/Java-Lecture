@@ -17,7 +17,7 @@ public class StudentScore {	//1.필드
 	
 	public double average() {	//4. 평균을 구하는 메소드(double average())
 		int sum = this.math + this.eng + this.sci;
-		double avg = (double)sum / 3;
+		double avg = (double)sum / 3; //값을넘겨줌
 		this.avg = avg;
 		return avg;
 	}
