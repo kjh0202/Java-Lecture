@@ -14,5 +14,6 @@ public class StringBuilderExample {
 		for(int i=1; i<=100; i++) {
 			sb.append(i);
 		}
+		System.out.println(sb.toString());
 	}
 }

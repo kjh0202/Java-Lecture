@@ -1,22 +1,17 @@
 package OpenChallenge_07;
 
 public class OC_07 {
-
-	public static void main(String [] args) {
-	    int a = 0; 
-	    int b = 0; 
-	     
-	    for(a = 0; a<1000; a++) { 
-	        for(b = 0; b<1000; b++) { 
-	            if( ( 1000 * ( a + b) ) == (500000 + a * b)) {
-	                 
-	                System.out.println( "a : " + a + " b : " + b); 
-	            } 
-	        } 
-	    } 
-	    a = 200; 
-	    b = 375; 
-	    System.out.println( a * b * (1000 - a -b)); 
-	} 
+	public static void main(String[] args) {
+		for (int a = 1; a <= 332; a++) {
+			for (int b = a+1; b < 500; b++) {
+				int c = 1000 - a - b;
+				if (c < b)
+					break;
+				if (a*a + b*b == c*c) {
+					System.out.println(a + ", " + b + ", " + c);
+					System.exit(0);
+				}
+			}
+		}
+	}
 }
-

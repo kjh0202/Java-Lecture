@@ -3,11 +3,11 @@ package sec04;
 public class InfinityAndNaNCheckExample {
 
 	public static void main(String[] args) {
-		int x = 5;
+		/*int x = 5;
 		double y = 0.0;
 		
-		double z = x / y;
-		//double z = x % y;
+		//double z = x / y;
+		double z = x % y;
 		
 		System.out.println(Double.isInfinite(z));
 		System.out.println(Double.isNaN(z));
@@ -21,8 +21,15 @@ public class InfinityAndNaNCheckExample {
 		} else {
 			System.out.println(z + 2);
 		}
+		int x = 5;
+		int y = 0;
 		
-
+		try P 
+			//int z = x / y;
+			  int z = x % y;
+			  sysout 
+		
+*/
 	}
 
 }

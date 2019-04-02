@@ -20,8 +20,14 @@ public class Exercise07 {
 			switch(num) {
 			case 1:
 				System.out.print("예금액> ");
-				int plus = Integer.parseInt(scan.nextLine());
-				balance += plus;
+					int plus = Integer.parseInt(scan.nextLine());
+					balance += plus;
+				/*try {
+					balance = Integer.parseInt(scan.nextLine());
+				} catch (NumberFormatException e) {
+					System.out.println("금액을 올바르게 입력하세요");
+				}*/
+				
 				break;
 			case 2:
 				System.out.print("출금액> ");
@@ -37,9 +43,11 @@ public class Exercise07 {
 				break;
 			case 4:
 				run=false;
+				break;
 			}
-			
+			System.out.println();	
 		}
+		scan.close();
 		System.out.println("프로그램 종료");
 	}
 

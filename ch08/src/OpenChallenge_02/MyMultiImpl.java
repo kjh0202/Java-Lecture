@@ -30,8 +30,8 @@ public class MyMultiImpl implements MyMulti {
 	public int min(int[] x) {
 		 int min = x[0];
 
-		 for (int i = 1; i < x.length; i++)
-			 if (x[i] < min) min = x[i];
+		 for (int item : x)
+			 if (min > item) min = item;
 
 		 return min;
 	}

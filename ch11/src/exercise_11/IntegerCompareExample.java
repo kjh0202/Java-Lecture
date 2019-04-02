@@ -14,3 +14,5 @@ public class IntegerCompareExample {
 	}
 
 }
+
+	// 비교범위가 -128~127을 초과했기 때문에 
