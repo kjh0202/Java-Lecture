@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SongDAO {
 	private Connection conn;
@@ -72,6 +74,39 @@ public class SongDAO {
 		  	return song;
 		  
 	}
+	
+	//selectAll
+	public List<SongDTO> selectAll() {
+		String query = "select * from song;";
+		PreparedStatement pStmt = null;
+		List<SongDTO> list = new ArrayList<SongDTO>();
+		  try {
+			  	pStmt = conn.prepareStatement(query);
+	            ResultSet rs = pStmt.executeQuery();
+	            
+	            while (rs.next()) {
+	            	SongDTO song = new SongDTO();
+	            	song.setId(rs.getInt("_id"));	// rs.getInt(1)
+	            	song.setTitle(rs.getString("title")); // rs.getString(2)
+	            	song.setLyrics(rs.getString("lyrics"));// rs.getString(3)
+	            	list.add(song);
+	            }
+	        } catch (Exception e) {
+	           e.printStackTrace();
+	        } finally {
+	            try {
+	                if (pStmt != null && !pStmt.isClosed())
+	                	pStmt.close();
+	            } catch (SQLException se) { 
+	            	se.printStackTrace();
+	            }
+	            
+          } 
+		  	return list;
+
+	}
+	
+	
 	
 	//update
 	public void updateSong(SongDTO song) {
