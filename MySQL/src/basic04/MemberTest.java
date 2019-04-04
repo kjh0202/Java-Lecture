@@ -16,6 +16,7 @@ public class MemberTest {
 		for (MemberDTO member: memberList)
 			System.out.println(member.toString());
 		
+		
 		mDao.close();
 	}
 }
