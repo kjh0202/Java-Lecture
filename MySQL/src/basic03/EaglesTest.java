@@ -6,6 +6,11 @@ public class EaglesTest {
 	public static void main(String[] args) {
 		EaglesDAO eDao = new EaglesDAO();
 		
+		EaglesDTO player = eDao.selectOne(5);
+		player.setThrowHand("rrr");
+		eDao.updatePlayer(player);
+		player = eDao.selectOne(5);
+
 		/*eDao.insertPlayer(new EaglesDTO(6,"김민하","외야수","대전고","right","right","971221","32000000"));
 		EaglesDTO player = eDao.selectOne(6);
 		System.out.println(player.toString() + "\n");
@@ -36,7 +41,6 @@ public class EaglesTest {
 		List<EaglesDTO> playerList = eDao.selectPlayersBySalary(200000);
 		for (EaglesDTO eagle : playerList)
 			System.out.println(eagle.toString());
-		
 		eDao.close();
 		
 	}

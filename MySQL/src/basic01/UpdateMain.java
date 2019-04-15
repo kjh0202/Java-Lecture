@@ -19,7 +19,7 @@ public class UpdateMain {
             PreparedStatement preparedStmt = conn.prepareStatement(query);
             preparedStmt.setString(1, "왜 예쁜 날 두고 가시나 (날 두고 가시나)");
             preparedStmt.setInt(2, 117);
-            
+           
             // execute the preparedStatement
             preparedStmt.executeUpdate();
             
